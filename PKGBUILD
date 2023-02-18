@@ -1,14 +1,14 @@
 # Maintainer: Your Name <your@email.com>
 
-pkgname=your-app-name
+pkgname=Arch-Mirror-Manager
 pkgver=1.0
 pkgrel=1
-pkgdesc="A short description of your application."
+pkgdesc="A Little application to update Arch Mirrors Automaticaly."
 arch=('any')
 url="http://yourwebsite.com"
 license=('MIT')
 depends=('python')
-source=("$pkgname-$pkgver.tar.gz::https://github.com/your-username/your-repo-name/archive/v$pkgver.tar.gz")
+source=("git+https://github.com/aamirali51/Pakos-Mirrorlist-Manager.git")
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
@@ -27,3 +27,4 @@ package() {
   install -Dm644 threads.py "$pkgdir/usr/share/$pkgname/threads.py"
   install -Dm644 icons/ "$pkgdir/usr/share/$pkgname/icons/"
 }
+sha256sums=('SKIP')
